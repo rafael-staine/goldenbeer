@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós - GoldenBeer</title>
+
+    <script src="https://kit.fontawesome.com/2572ff7e65.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/sobre.css">
+
+</head>
+
+<body>
+    <div class="container-sobre-nos">
+
+        <!-- INICIO DO HEADER -->
+        <header>
+            <div class="container-header">
+
+                <!-- logo -->
+                <a href="sobre.html"><img src="img/logo.png" alt="Logo - GoldenBeer" width="160px" class="logo"></a>
+
+                <!-- Menu -->
+                <nav>
+                    <ul class="menu">
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="index.html">Cardápio</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="#sobre-nos">Sobre Nós</a></li>
+                        <li><a href="index.html">Contato</a></li>
+                        <button id="toggleDarkMode">Ativar Modo Escuro</button>
+                        <script src="js/script.js"></script>
+                    </ul>
+                    <div class="hamburger">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                </nav>
+
+                <!-- Busca -->
+                <div class="box">
+                    <i class="fa-brands fa-sistrix"></i>
+                    <input class="busca" type="" placeholder="Faça sua Busca" required />
+                </div>
+
+            </div>
+        </header>
+
+        <script type="text/javascript">
+            const hamburger = document.querySelector('.hamburger');
+            const menu = document.querySelector('.menu');
+
+            hamburger.addEventListener('click', () => {
+                menu.classList.toggle('active');
+            });
+        </script>
+        <!-- FIM DO HEADER -->
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <!-- INICIO DE QUEM SOMOS   -->
+        <div class="quem-somos" id="sobre-nos">
+            <h1 class="h1-explicacao-Sadega">Quem Somos</h1>
+            <p class="p-Sadega">Olá! Somos integrantes da Adega GoldenBeer, uma empresa de bebidas que se destaca no
+                Litoral
+                Norte de São Paulo
+                pela sua excelência em diversos produtos e compromisso com o bem estar e a saúde de nossos clientes com
+                nossos
+                melhores produtos, nossos nomes são Raick Staine, Rafael Staine, Maria Vitória,
+                Thiago de Britto e Luiza Duarte. Em nossa jornada, buscamos não só apenas a venda de nossoa produtos e
+                Aspectos
+                Econômicos
+                mas também o desenvolvimento sustentável, inclusão social, acessibilidade para nossos clientes com
+                defieiências,
+                diversidade cultural. Esse site foi informativo sobre nossa adega foi desenvolvido por Raick
+                Staine e Rafael Staine por meio de técnicas e extensões de programação como: Visual Studio Code (HTML e
+                CSS), Figma e GitHub para a criação e utilização de nosso site.</p>
+        </div>
+        <!-- FIM DE QUEM SOMOS   -->
+
+        <!-- INICIO DE SOBRE NOS -->
+
+        <h1 class="h1-mvv">Missões, Visões e Valores</h1>
+        <div class="grid-sobre">
+            <div class="grid-mvv">
+                <h3 class="h3-s">Missão</h3>
+                <p class="p-as1">Proporcionar aos nossos clientes uma experiência única ao explorar e desfrutar das
+                    bebidas de alta qualidade de nossa adega e oferecendo um atendimento personalizado e
+                    especializado para todos.</p>
+            </div>
+            <div class="grid-mvv">
+                <h3 class="h3-s">Visão</h3>
+                <p class="p-as1">Nosso objetivo é ser reconhecidos como a melhor adega com os melhores preços da
+                    região, e pelo ambiente acolhedor e sofisticado da nossa loja e conhecimento e paixão de nossa
+                    equipe. </p>
+            </div>
+            <div class="grid-mvv">
+                <h3 class="h3-s">Valores</h3>
+                <p class="p-as1">Qualidade de produtos, compromisso com o cliente, inovação dos produtos e respeito
+                    com os clientes.</p>
+            </div>
+        </div>
+
+        <!-- FIM DE SOBRE NOS -->
+
+        <!-- INICIO DOS CARDS -->
+        <h1 class="h1-explicacao-card">Nossos Integrantes</h1>
+        <div class="card-grid">
+            <div class="card">
+                <img src="img/integrantes/luiza.jpg" alt="Luiza">
+                <p class="titulo">Luiza Duarte Ambrosino</p>
+            </div>
+
+            <div class="card">
+                <img src="img/integrantes/mavi.jpg" alt="Maria">
+                <p class="titulo">Maria Vitória Ribeiro Falavigna</p>
+            </div>
+
+            <div class="card">
+                <img src="img/integrantes/rafael.jpg" alt="Rafael">
+                <p class="titulo">Rafael Staine dos Santos</p>
+            </div>
+
+            <div class="card">
+                <img src="img/integrantes/raick.webp" alt="Raick">
+                <p class="titulo">Raick Staine dos Santos</p>
+            </div>
+
+            <div class="card">
+                <img src="img/integrantes/thiago.jpg" alt="Thiago">
+                <p class="titulo">Thiago de Britto</p>
+            </div>
+        </div>
+
+        <!-- FIM DOS CARDS -->
+
+        <!-- INICIO DO FOOTER -->
+        <footer class="footer-sobre">
+            <nav>
+                <ul class="menu-footer">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="index.html">Cardápio</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="#sobre-nos">Sobre Nós</a></li>
+                    <li><a href="index.html">Contato</a></li>
+                </ul>
+            </nav>
+
+            <ul class="icons">
+                <li><a href="mailto:goldenbeer@gmail.com" class="footer-icons"><i
+                            class="fa-regular fa-envelope"></i></a></li>
+                <li><a href="#" class="footer-icons"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="tel:(12)99791-2083" class="footer-icons"><i class="fa-brands fa-whatsapp"></i></a></li>
+            </ul>
+
+            <p class="p">&copy;Adega GoldenBeer | 2024</p>
+        </footer>
+        <!-- FIM DO FOOTER -->
+
+    </div>
+</body>
+
+</html>

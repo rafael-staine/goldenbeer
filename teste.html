@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    /* Estilos gerais */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+    }
+
+    /* Header */
+    header {
+        background-color: #007BFF;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        position: relative;
+    }
+
+    /* Criando um conteúdo longo para testar a rolagem */
+    .content {
+        height: 2000px;
+        /* Altura para rolar */
+        padding: 20px;
+    }
+
+    /* Estilos do botão */
+    button {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        padding: 15px;
+        font-size: 20px;
+        cursor: pointer;
+        display: none;
+        /* Inicialmente invisível */
+        opacity: 0.7;
+        transition: opacity 0.3s;
+    }
+
+    /* Efeito de hover para o botão */
+    button:hover {
+        background-color: #0056b3;
+        opacity: 1;
+    }
+</style>
+
+<body>
+    <!-- Header -->
+    <header id="header">
+        <h1>Bem-vindo ao Meu Site</h1>
+        <p>Este é o cabeçalho.</p>
+    </header>
+
+    <div class="content">
+        <!-- Conteúdo longo para criar rolagem -->
+        <p>Conteúdo aqui...</p>
+        <p>Repita isso várias vezes para testar a rolagem.</p>
+        <p>Conteúdo adicional...</p>
+        <p>Repita mais conteúdo até chegar no fim.</p>
+        <p>Continue rolando para baixo...</p>
+        <!-- Mais conteúdo para forçar rolagem -->
+    </div>
+
+    <!-- Botão Voltar ao topo -->
+    <button id="backToTop" class="back-to-top">Voltar ao Topo</button>
+
+    <script>
+        // Obtém o botão
+        const backToTopButton = document.getElementById('backToTop');
+
+        // Função que exibe ou oculta o botão de acordo com o rolar da página
+        window.onscroll = function () {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                // Mostra o botão quando o usuário rola mais de 100px
+                backToTopButton.style.display = "block";
+            } else {
+                // Oculta o botão quando o usuário está no topo
+                backToTopButton.style.display = "none";
+            }
+        };
+
+        // Função para rolar suavemente até o topo do header
+        backToTopButton.onclick = function () {
+            document.getElementById('header').scrollIntoView({
+                behavior: 'smooth'
+            });
+        };
+
+    </script>
+</body>
+
+</html>

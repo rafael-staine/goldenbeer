@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoldenBeer</title>
+
+    <script src="https://kit.fontawesome.com/2572ff7e65.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sobre.css">
+    <link rel="stylesheet" href="css/reset.css">
+
+    <!-- LOGO BOLDENBER -->
+     <link rel="icon" href="img/favicon.ico" class="favicon">
+
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- INICIO DO HEADER -->
+        <header id="header">
+            <div class="container-header">
+
+                <!-- logo -->
+                <a href="sobre.html"><img src="img/logo.png" alt="Logo - GoldenBeer" width="160px" class="logo"></a>
+
+                <!-- Menu -->
+                <nav>
+                    <ul class="menu">
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="#cardapio">Cardápio</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="sobre-nos.html">Sobre Nós</a></li>
+                        <li><a href="#contatos">Contato</a></li>
+                        <button id="toggleDarkMode">Ativar Modo Escuro</button>
+                        <script src="js/script.js"></script>
+                    </ul>
+                    <div class="hamburger">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                </nav>
+
+                <!-- Busca -->
+                <div class="box">
+                    <i class="fa-brands fa-sistrix"></i>
+                    <input class="busca" type="" placeholder="Faça sua Busca" required />
+                </div>
+
+            </div>
+        </header>
+
+        <script type="text/javascript">
+            const hamburger = document.querySelector('.hamburger');
+            const menu = document.querySelector('.menu');
+
+            hamburger.addEventListener('click', () => {
+                menu.classList.toggle('active');
+            });
+        </script>
+        <!-- FIM DO HEADER -->
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <!-- IMAGEM INICIAL -->
+        <img src="img/logo.png" alt="Imagem Inicial" class="img-incial" id="inicio">
+        <!-- FIM DA IMAGEM INICIAL -->
+
+        <!-- INICIO DO CARROSSEL -->
+        <div class="carousel-container">
+            <div class="carousel">
+                <img src="img/imagens-carrossel/(7).jpg" alt="Imagem 1" class="carousel-item">
+                <img src="img/imagens-carrossel/(2).jpg" alt="Imagem 2" class="carousel-item">
+                <img src="img/imagens-carrossel/(4).jpg" alt="Imagem 3" class="carousel-item">
+                <img src="img/imagens-carrossel/(3).jpg" alt="Imagem 4" class="carousel-item">
+                <img src="img/imagens-carrossel/(6).jpg" alt="Imagem 5" class="carousel-item">
+                <img src="img/imagens-carrossel/(5).jpg" alt="Imagem 6" class="carousel-item">
+                <img src="img/imagens-carrossel/(1).jpg" alt="Imagem 7" class="carousel-item">
+                <img src="img/imagens-carrossel/(8).jpg" alt="Imagem 8" class="carousel-item">
+            </div>
+        </div>
+        <!-- FIM DO CARROSSEL -->
+
+
+        <!-- INICIO DO CARDÁPIO -->
+        <aside id="cardapio" class="cardapio">
+
+            <h1 class="h1-principal">Cardápio</h1>
+            <img src="img/cardapio.jpg" alt="Cardápio" class="img-cardapio">
+            <h5 class="h5-principal">Trabalhamos com serviço de Delivery</h5>
+
+        </aside>
+        <!-- FIM DO CARDÁPIO -->
+
+        <!-- INICIO DO DRINK -->
+        <div class="div-drink">
+            <div class="grid-drink">
+                <img src="img/drink.jpg" alt="Drink" class="img-drink">
+                <p class="p-drink">Fornecemos doses que são feitas na hora de acordo com a sua preferência.</p>
+            </div>
+        </div>
+        <!-- FIM DO DRINK -->
+
+        <!-- INICIO DO PEDIDO E FORMA DE PAGAMENTO -->
+        <div class="flex-fp">
+            <div class="pedido-e-forma">
+
+                <div class="pedido">
+                    <h5 class="h5-pedido">Clique aqui e faça Seu Pedido <i class="fa-solid fa-arrow-down fa-bounce"></i>
+                    </h5>
+                    <div class="standardcontainer">
+                        <div class="containerbotao">
+                            <button class="cta-button" href="tel:(12)99791-2083">Faça seu Pedido</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="forma">
+                    <h3 class="h1-forma">Forma de Pagamento</h3>
+                    <img src="img/f-pagamento.webp" alt="forma de Pagamento">
+                </div>
+            </div>
+        </div>
+        <!-- FIM DO PEDIDO E FORMA DE PAGAMENTO -->
+
+        <!-- INIDIO DA LOCALIZAÇÃO E HORÁRIO DE FUNCIONAMENTO -->
+        <div class="localizacao-hf">
+            <div class="localizacao">
+                <h3 class="h3-maps">Localização da Adega</h3>
+                <img src="img/localizacao.jpg" alt="Localização da Adega" class="img-localizacao">
+                <p class="p-localizacao">Local: Av.Vasconcelos-Maiade-Assis, N°400. Próximo á Praçada Cultura
+                </p>
+            </div>
+
+            <p class="p-hf">Horário de Funcionamento: <br>Seguna á Sexta das 10:00h ás 22:00h <br>Sabado e domingo das
+                12:00h ás 03:00h</p>
+        </div>
+        <!-- FIM DA LOCALIZAÇÃO E HORÁRIO DE FUNCIONAMENTO -->
+
+        <!-- INICIO DE NOSSOS CONTATOS -->
+        <section class="contatos" id="contatos">
+            <h1 class="contatos-titulo">Contatos</h1>
+            <div class="redes-sociais">
+
+                <div class="item">
+                    <img src="img/png/email.png" href="mailto:goldenbeer@gmail.com">
+                    <p>goldenbeer@gmail.com</p>
+                </div>
+
+                <div class="item">
+                    <img src="img/png/instagram.png">
+                    <p>@goldenbeer</p>
+                </div>
+
+                <div class="item">
+                    <img src="img/png/whatsapp.png" href="tel:(12)99791-2083">
+                    <p>ㅤ(12) 99791 - 2083</p>
+                </div>
+
+            </div>
+        </section>
+        <!-- FIM DE NOSSOS CONTATOS -->
+
+        <!-- INICIO DO FOOTER -->
+        <footer>
+            <div class="container-footer">
+                <nav>
+                    <ul class="menu-footer">
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="#cardapio">Cardápio</a></li>
+                        <li><a href="#Contato">Contato</a></li>
+                        <li><a href="sobre-nos.html">Sobre Nós</a></li>
+                        <li><a href="index.html">Contato</a></li>
+                    </ul>
+                </nav>
+
+                <ul class="icons">
+                    <li><a href="mailto:goldenbeer@gmail.com" class="footer-icons"><i
+                                class="fa-regular fa-envelope"></i></a></li>
+                    <li><a href="#" class="footer-icons"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="tel:(12)99791-2083" class="footer-icons"><i class="fa-brands fa-whatsapp"></i></a></li>
+                </ul>
+
+                <p class="p">&copy;Adega GoldenBeer | 2024</p>
+
+            </div>
+        </footer>
+        <!-- FIM DO FOOTER -->
+
+    </div>
+</body>
+
+</html>

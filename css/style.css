@@ -1,0 +1,687 @@
+:root {
+    --black: hsl(0, 0%, 0%);
+    --black-5: hsl(0, 0%, 5%);
+    --black-10: hsl(0, 0%, 10%);
+    --black-25: hsl(0, 0%, 25%);
+    --black-50: hsl(0, 0%, 50%);
+    --black-75: hsl(0, 0%, 75%);
+    --white: hsl(0, 0%, 100%);
+    --red: hsl(0, 100%, 50%);
+    --red2: hsl(0, 70%, 50%);
+    --yellow: hsl(65, 100%, 50%);
+    --green: hsl(120, 100%, 50%);
+    --green2: hsl(120, 80%, 45%);
+    --blue: hsl(202, 100%, 50%);
+    --green3: #228B22;
+
+    /* fontes */
+    --ff-oswald: "Oswald", sans-serif;
+    --ff-rubik: "Rubik", sans-serif;
+
+    /* tamanho fs */
+    --fs-40: 4rem;
+    /* 4x16*/
+    --fs-30: 3rem;
+    --fs-24: 1.4rem;
+    --fs-18: 1.8rem;
+    --fs-14: 1.4rem;
+    --fs-12: 1.3rem;
+
+    --fw-300: 300;
+    --fw-500: 500;
+    --fw-600: 600;
+    --fw-700: 700;
+
+    /* Espaço */
+    --section-padding: 80px;
+
+    /* borda */
+    --radius-5: 5px;
+    --radius-5: 8px;
+
+    /* Sombra */
+    --shadow-1: 10px 0 60px hsla(0, 0%, 15%, 0.07);
+    --shadow-2: 10px 0 60px hsla(0, 0%, 15%, 0.1);
+
+    /* Transição */
+    --transition-1: 0.25s ease;
+    --transition-2: 0.50s ease;
+    --cubic-out: cubic-bezier(0.33, 0.85, 0.4, 0.96);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+
+/* COMEÇO DAS OPÇÕES PRINCIPAIS */
+body {
+    background-image: url(../img/dark-wood.jpg);
+    background-attachment: fixed;
+}
+
+.container {
+    max-width: auto;
+}
+
+.h1-principal {
+    font-family: "Lobster", sans-serif;
+    text-align: center;
+    font-size: 3em;
+    margin-block: 17px;
+    color: white;
+}
+
+.h5-principal {
+    font-family: "Ubuntu Mono", monospace;
+    font-size: 1.3em;
+    margin: 20px;
+    color: white;
+    text-align: center;
+}
+
+.p-principal {
+    font-family: "Ubuntu Mono", monospace;
+    text-align: justify;
+    font-size: 1.2em;
+    margin: 30px;
+    color: white;
+}
+
+/* FIM DAS OPÇÕES PRINCIPAIS */
+
+.favicon {
+    border-radius: 1px solid var(--black);
+    border-radius: 15px;
+}
+
+/* INICIO DO HEADER */
+header {
+    z-index: 1;
+    position: fixed;
+    background-color: #ffd900dc;
+    height: 170px;
+    width: 100%;
+    padding: 15px;
+}
+
+.container-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 200px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.logo:hover {
+    transform: translateY(-5px);
+}
+
+nav {
+    display: flex;
+    gap: 100px;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    margin-left: 20px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    font-size: 1.2em;
+    display: block;
+}
+
+.menu li a:hover {
+    color: #b8b7b7;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #ffd900dc;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #d1b720cb;
+}
+
+/* Definindo as cores do modo escuro */
+.dark-mode header,
+.dark-mode footer,
+.dark-mode .submenu {
+    background-color: #121212;
+    color: #fff;
+}
+
+body.dark-mode button {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-mode .submenu a:hover {
+    color: #b8b7b7;
+}
+
+/* Estilos para o submenu dentro do item "Sobre" */
+.sobre {
+    position: relative;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style-type: none;
+    padding: 0;
+    background-color: #ffd900dc;
+    width: 180px;
+    z-index: 10;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.sobre:focus-within .submenu,
+.sobre .sobre-link:focus+.submenu {
+    display: block;
+    /* Exibe o submenu quando o item "Sobre" ou o submenu tem foco */
+}
+
+.submenu li {
+    padding: 10px;
+    text-align: left;
+}
+
+.submenu li a {
+    color: white;
+    font-size: 1em;
+}
+
+.submenu li a:hover {
+    color: black;
+}
+
+/* Estilos para o menu responsivo */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+}
+
+/* Estilos para o input de busca */
+.busca {
+    background-color: rgba(255, 255, 255, 0.800);
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+}
+
+.busca::placeholder {
+    color: rgba(0, 0, 0, 0.678);
+}
+
+input {
+    padding-left: 60px;
+}
+
+.box i {
+    color: rgba(0, 0, 0, 0.678);
+    position: absolute;
+    top: 47.3%;
+    right: 180px;
+    transform: translateY(-50%);
+}
+
+/* INICIO DO SISTEMA RESPONSIVO DO HEADER */
+@media screen and (max-width: 768px) {
+    .container-flex {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: #6b6767;
+        position: absolute;
+        top: 150px;
+        left: 0;
+        z-index: 1;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+/* FIM DO SISTEMA RESPONSIVO DO HEADER*/
+
+/* FIM DO HEADER */
+
+/* INICIO DA IMAGEM INICIAL */
+.img-incial {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+}
+
+/* FIM DA IMAGEM INICIAL */
+
+/* INICIO DO CARROSSEL */
+.carousel-container {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    /* Esconde as imagens fora do contêiner */
+    margin-top: 350px;
+}
+
+/* Estilo para o carrossel (a faixa das imagens) */
+.carousel {
+    display: flex;
+    /* Alinha as imagens em uma linha */
+    transition: transform;
+    /* Animação suave para transição */
+    gap: 30px;
+}
+
+/* Estilo para cada imagem do carrossel */
+.carousel-item {
+    width: 700px;
+    /* Cada imagem ocupa 100% da largura do container */
+    height: auto;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+/* Adiciona um efeito de transição automática */
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    33% {
+        transform: translateX(-100%);
+    }
+
+    66% {
+        transform: translateX(-200%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.carousel {
+    animation: slide 9s infinite;
+    /* Faz o carrossel passar automaticamente */
+}
+
+/* FIM DO CARROSSEL */
+
+/* INICIO DO CARDÁPIO */
+.cardapio {
+    margin-top: 550px;
+}
+
+.img-cardapio {
+    border: 5px solid black;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* FIM DO CARDÁPIO */
+
+/* INICIO DO DRINK */
+.div-drink {
+    display: grid;
+    grid-template-columns: 1fr;
+    border: 4px solid rgb(0, 0, 0);
+    box-shadow: 13px 7px rgba(0, 0, 0, 0.288);
+    border-radius: 10px;
+    background-color: white;
+    width: 500px;
+    margin-top: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.grid-drink {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 10px;
+}
+
+.img-drink {
+    height: 355px;
+    width: 265px;
+}
+
+.p-drink {
+    font-family: "Ubuntu Mono", monospace;
+    text-align: center;
+    font-size: 1.2em;
+    margin: 30px;
+    color: rgb(0, 0, 0);
+    margin: auto;
+}
+
+/* FIM DO DRINK */
+
+/* INICIO DO PEDIDO E FORMA DE PAGAMENTO */
+.flex-fp {
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pedido-e-forma {
+    display: flex;
+    gap: 100px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 350px;
+}
+
+.h1-forma {
+    font-family: "Lobster", sans-serif;
+    text-align: center;
+    font-size: 1.7em;
+    color: white;
+}
+
+.h5-pedido {
+    font-family: "Lobster", sans-serif;
+    font-size: 1.3em;
+    color: white;
+    text-align: center;
+}
+
+.containerbotao {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.cta-button {
+    padding: 15px 30px;
+    font-size: 18px;
+    color: white;
+    background-color: #ffd900dc;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    animation: pulsar 2s infinite;
+}
+
+@keyframes pulsar {
+
+    0%,
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(0 0 0 0.2);
+    }
+
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 10px rgba(0 0 0 0.4);
+    }
+}
+
+.cta-button:hover {
+    animation: none;
+    background-color: #d1b720cb;
+}
+
+
+
+/* FIM DO PEDIDO E FORMA DE PAGAMENTO */
+
+/* INIDIO DA LOCALIZAÇÃO E HORÁRIO DE FUNCIONAMENTO */
+.localizacao-hf {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 350px;
+    margin-bottom: 350px;
+
+}
+
+.localizacao {
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+}
+
+.h3-maps {
+    font-family: "Lobster", sans-serif;
+    font-size: 1.5em;
+    text-align: center;
+    color: white;
+}
+
+.p-localizacao {
+    font-family: "Ubuntu Mono", monospace;
+    text-align: center;
+    font-size: 1.2em;
+    color: white;
+}
+
+.img-localizacao {
+    border: 1px solid rgba(10, 10, 10, 0.233);
+    width: 500px;
+    height: 300px;
+    margin-top: 20px;
+}
+
+.p-hf {
+    font-family: "Ubuntu Mono", monospace;
+    font-size: 1.2em;
+    color: white;
+    text-align: center;
+    border: 2px solid black;
+    width: 400px;
+    height: 130px;
+    margin: auto;
+    background-color: rgb(23, 60, 92);
+
+}
+
+/* FIM DA LOCALIZAÇÃO E HORÁRIO DE FUNCIONAMENTO */
+
+/* INICIO DO SISTEMA RESPONSIVO DA LOCALIZAÇÃO E HORÁRIO DE FUNCIONAMENTO */
+@media screen and (max-width: 768px) {
+    .localizacao-hf {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 200px;
+    }
+}
+
+/* FIM DO SISTEMA RESPONSIVO DA DA LOCALIZAÇÃO E HORÁRIO DE FUNCIONAMENTO*/
+
+/* INICIO DE NOSSOS CONTATOS */
+
+.contatos {
+    margin-inline: auto;
+    width: 1000px;
+    height: 550px;
+    background-color: var(--black);
+    border: var(--white) 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* padding-top: 50px; */
+    border: 2px solid var(--white);
+}
+
+.contatos-titulo {
+    text-align: center;
+    font-size: 30px;
+    color: var(--white);
+    margin-bottom: 70px;
+    margin-top: 60px;
+}
+
+.redes-sociais {
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.item {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    gap: 10px;
+}
+
+.item:hover {
+    transform: translateY(-20px);
+    transition: 0.5s;
+}
+
+.item img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+}
+
+.item p {
+    color: var(--white);
+    font-size: 20px;
+}
+
+.item p:hover {
+    color: #b8b7b7;
+}
+
+/* FIM DE NOSSOS CONTATOS */
+
+/* INICIO DO SISTEMA RESPONSIVO DE NOSSOS CONTATOS */
+@media screen and (max-width: 768px) {
+    .contatos {
+        width: 700px;
+        height: 500px;
+    }
+}
+
+/* FOM DO SISTEMA RESPONSIVO DE NOSSOS CONTATOS */
+
+/* INICIO DO FOOTER */
+footer {
+    background-color: #ffd900dc;
+    height: 125px;
+    width: 100%;
+    margin-top: 500px;
+}
+
+.container-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    color: black;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+.icons {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    position: absolute;
+    right: 90px;
+    font-size: 1.6em;
+}
+
+.footer-icons {
+    color: white;
+}
+
+.footer-icons:hover {
+    color: black;
+}
+
+.p {
+    font-family: "Ubuntu Mono", monospace;
+    font-size: 1.2em;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.menu-footer {
+    list-style-type: none;
+}
+
+/* FIM DO FOOTER */
+
+:focus-visible {
+    outline-offset: 4px;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar {
+    background-color: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background-image: url(../img/skol.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid yellow;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #ffd900dc;
+}
