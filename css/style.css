@@ -258,36 +258,6 @@ input {
     transform: translateY(-50%);
 }
 
-/* INICIO DO SISTEMA RESPONSIVO DO HEADER */
-@media screen and (max-width: 768px) {
-    .container-flex {
-        flex-direction: column;
-        padding: 10px;
-    }
-
-    .menu {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-        background-color: #6b6767;
-        position: absolute;
-        top: 150px;
-        left: 0;
-        z-index: 1;
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    }
-
-    .menu.active {
-        display: flex;
-    }
-
-    .hamburger {
-        display: flex;
-    }
-}
-
-/* FIM DO SISTEMA RESPONSIVO DO HEADER*/
 
 /* FIM DO HEADER */
 
@@ -523,17 +493,6 @@ input {
 
 /* FIM DA LOCALIZAÇÃO E HORÁRIO DE FUNCIONAMENTO */
 
-/* INICIO DO SISTEMA RESPONSIVO DA LOCALIZAÇÃO E HORÁRIO DE FUNCIONAMENTO */
-@media screen and (max-width: 768px) {
-    .localizacao-hf {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 200px;
-    }
-}
-
-/* FIM DO SISTEMA RESPONSIVO DA DA LOCALIZAÇÃO E HORÁRIO DE FUNCIONAMENTO*/
-
 /* INICIO DE NOSSOS CONTATOS */
 
 .contatos {
@@ -545,7 +504,6 @@ input {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* padding-top: 50px; */
     border: 2px solid var(--white);
 }
 
@@ -594,73 +552,6 @@ input {
 
 /* FIM DE NOSSOS CONTATOS */
 
-/* INICIO DO SISTEMA RESPONSIVO DE NOSSOS CONTATOS */
-@media screen and (max-width: 768px) {
-    .contatos {
-        width: 700px;
-        height: 500px;
-    }
-}
-
-/* FOM DO SISTEMA RESPONSIVO DE NOSSOS CONTATOS */
-
-/* INICIO DO FOOTER */
-footer {
-    background-color: #ffd900dc;
-    height: 125px;
-    width: 100%;
-    margin-top: 500px;
-}
-
-.container-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-a {
-    color: white;
-}
-
-a:hover {
-    color: black;
-}
-
-a:link {
-    text-decoration: none;
-}
-
-.icons {
-    list-style-type: none;
-    display: flex;
-    gap: 20px;
-    position: absolute;
-    right: 90px;
-    font-size: 1.6em;
-}
-
-.footer-icons {
-    color: white;
-}
-
-.footer-icons:hover {
-    color: black;
-}
-
-.p {
-    font-family: "Ubuntu Mono", monospace;
-    font-size: 1.2em;
-    color: white;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.menu-footer {
-    list-style-type: none;
-}
-
-/* FIM DO FOOTER */
-
 :focus-visible {
     outline-offset: 4px;
 }
@@ -685,3 +576,171 @@ a:link {
 ::-webkit-scrollbar-thumb:hover {
     background-color: #ffd900dc;
 }
+
+/* Sistema responsivo para o header */
+@media screen and (max-width: 500px) {
+
+    /* Header */
+    header {
+        height: auto;
+        padding: 10px;
+    }
+
+    .container-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        width: 150px;
+        margin-top: 0;
+    }
+
+    nav {
+        display: block;
+        margin-top: 20px;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #6b6767;
+        position: absolute;
+        top: 150px;
+        left: 0;
+        z-index: 1;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    .bar {
+        width: 30px;
+        height: 3px;
+        background-color: white;
+        margin: 3px 0;
+    }
+
+    /* Ajustes no input de busca */
+    .busca {
+        width: 80%;
+        margin: 10px 0;
+    }
+
+    /* Cardápio */
+    .cardapio {
+        margin-top: 400px;
+    }
+
+    .img-cardapio {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    /* Div Drink */
+    .div-drink {
+        width: 100%;
+        margin-top: 400px;
+    }
+
+    .grid-drink {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin: 20px;
+    }
+
+    .img-drink {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Pedido e Forma de Pagamento */
+    .pedido-e-forma {
+        flex-direction: column;
+        margin-top: 400px;
+    }
+
+    .flex-fp {
+        width: 90%;
+    }
+
+    .forma img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Localização e Horário de Funcionamento */
+    .localizacao-hf {
+        grid-template-columns: 1fr;
+        gap: 200px;
+    }
+
+    .localizacao {
+        width: 80%;
+    }
+
+    .img-localizacao {
+        width: 100%;
+        height: auto;
+    }
+
+    .p-hf {
+        width: 90%;
+    }
+
+    /* Nossos Contatos */
+    .contatos {
+        width: auto;
+        height: 500px;
+        margin-top: 50px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .item {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 20px;
+    }
+
+    .item p {
+        font-size: 0.7em;
+        text-align: justify;
+    }
+
+    .redes-sociais {
+        gap: 10px;
+    }
+
+    /* footer */
+
+    .footer-sobre {
+        flex-direction: column;
+        width: 100px;
+    }
+
+    a {
+        font-size: 1em;
+    }
+
+    .p {
+        font-size: 1em;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .menu-footer {
+        text-align: center;
+    }
+}
+
+/* Fim do sistema responsivo */

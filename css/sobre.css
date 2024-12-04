@@ -123,7 +123,7 @@
 /* FIM DE SOBRE NOSSA ADEGA */
 
 /* INICIO DO SISTEMA RESPONSIVO DA PAGINA SOBRE */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 500px) {
     .a-sobre {
         display: grid;
         grid-template-columns: 1fr;
@@ -146,15 +146,10 @@
     }
 
     .sl-container {
-        margin-left: 65px;
-        margin-right: 65px;
+        margin-left: 20px;
+        margin-right: 20px;
         margin-top: 200px;
         margin-bottom: 200px;
-    }
-
-    .logo-sobre {
-        margin-left: 30px;
-        margin-right: 30px;
     }
 
     .p-Sadega {
@@ -167,7 +162,9 @@
     }
 
     .sobre-adega {
-        margin: 65px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 100px;
     }
 }
 
@@ -281,7 +278,7 @@
 /* FIM DE CARS */
 
 /* INICIO DO SISTEMA RESPONSIVO DA PAGINA SOBRE NÓS*/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 500px) {
     .grid-sobre {
         display: grid;
         grid-template-columns: 1fr;
@@ -294,13 +291,13 @@
     }
 
     .quem-somos {
-        margin-left: 50px;
-        margin-right: 50px;
+        margin-left: 10px;
+        margin-right: 10px;
     }
 
     .card-grid {
         display: grid;
-        grid-template-columns: repeat(1, 1fr 1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
 
     .card {
@@ -318,7 +315,6 @@
 /* INICIO DO FOOTER - SOBRE*/
 .footer-sobre {
     background-color: #ffd900dc;
-    height: 125px;
     width: 100%;
     display: flex;
     justify-content: space-between;
